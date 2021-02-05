@@ -5,13 +5,13 @@ import java.util.Scanner;
 /**
 * TicTacToeView implements a console-based View for the Tic-Tac-Toe game.
 *
-* @author  Your Name
+* @author  PD Stone
 * @version 1.0
 */
 public class TicTacToeView {
-    
+
     private final Scanner keyboard;
-    
+
     /**
     * Constructor.  This version of the Tic-Tac-Toe game uses the console for
     * I/O, so a {@link Scanner} connected to standard input is initialized to
@@ -19,11 +19,11 @@ public class TicTacToeView {
     * directed to standard output using the {@link System#out} output stream.
     */
     public TicTacToeView() {
-        
+
         keyboard = new Scanner(System.in);
-        
+
     }
-    
+
     /**
     * Prompt the current player to enter his or her next move.  Use iXTurn to
     * display an appropriate prompt for the current player.  This method should:
@@ -38,13 +38,13 @@ public class TicTacToeView {
     * @see             TicTacToeMove
     */
     public TicTacToeMove getNextMove(boolean isXTurn) {
-        
+
         // INSERT YOUR CODE HERE (refer to the example output on Canvas!)
-        
+
         return null; // this is a stub; you should remove it later!
 
     }
-    
+
     /**
     * This method displays a descriptive error message if there was a problem
     * with an attempt to enter a move.  This can happen if the specified
@@ -55,14 +55,14 @@ public class TicTacToeView {
         System.out.println("Entered location is invalid, already marked, or out of bounds.");
 
     }
-    
+
     /**
     * This method prints the final result of the Tic-Tac-Toe game to the
     * console: the current state, appended by an exclamation point, on a line by
     * itself.  (The result is provided as a String by the {@link TicTacToeModel}
     * class's {@link TicTacToeModel#getState()} method; this method simply
     * outputs it to the console.)
-    * 
+    *
     * @param  result  the result of the game, from {@link TicTacToeModel#getState()}
     */
     public void showResult(String result) {
@@ -70,7 +70,7 @@ public class TicTacToeView {
         System.out.println(result + "!");
 
     }
-    
+
     /**
     * This method prints the current Tic-Tac-Toe game board to the console,
     * prepended by two blank lines.  (The content of the game board is provided
@@ -82,9 +82,9 @@ public class TicTacToeView {
     * @see           TicTacToeModel
     */
     public void showBoard(String board) {
-        
+
         System.out.println("\n\n" + board);
-        
+
     }
-	
+
 }

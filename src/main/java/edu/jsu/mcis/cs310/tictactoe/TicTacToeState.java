@@ -3,26 +3,26 @@ package edu.jsu.mcis.cs310.tictactoe;
 /**
 * TicTacToeState represents the state of the current game of Tic-Tac-Toe.
 *
-* @author  Your Name
+* @author  PD Stone
 * @version 1.0
 */
 public enum TicTacToeState {
-    
+
     /**
      * The game is over, and X is the winner
-     */    
+     */
     X("X"),
-    
+
     /**
      * The game is over, and O is the winner
      */
     O("O"),
-    
+
     /**
      * The game has ended in a tie (no winner)
      */
     TIE("TIE"),
-    
+
     /**
      * The game is still in progress (no winner)
      */
@@ -38,5 +38,5 @@ public enum TicTacToeState {
     public String toString() {
         return message;
     }
-    
+
 }

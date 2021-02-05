@@ -4,16 +4,16 @@ package edu.jsu.mcis.cs310.tictactoe;
 * TicTacToeMove represents the row and column of a player's move in the
 * Tic-Tac-Toe game.
 *
-* @author  Your Name
+* @author  PD Stone
 * @version 1.0
 */
 public class TicTacToeMove {
-    
+
     /**
      * The row (Y coordinate) of the move
      */
     private final int row;
-    
+
     /**
      * The column (X coordinate) of the move
      */
@@ -21,7 +21,7 @@ public class TicTacToeMove {
 
     /**
     * Constructor
-    * 
+    *
     * @param  row  the row (Y coordinate) of the move
     * @param  col  the column (X coordinate) of the move
     */
@@ -29,7 +29,7 @@ public class TicTacToeMove {
         this.row = row;
         this.col = col;
     }
-    
+
     /**
     * Getter method for the row.
     *
@@ -47,5 +47,5 @@ public class TicTacToeMove {
     public int getCol() {
         return col;
     }
-    
+
 }

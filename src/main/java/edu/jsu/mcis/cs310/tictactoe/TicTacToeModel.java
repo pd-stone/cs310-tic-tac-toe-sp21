@@ -3,22 +3,22 @@ package edu.jsu.mcis.cs310.tictactoe;
 /**
 * TicTacToeModel implements the Model for the Tic-Tac-Toe game.
 *
-* @author  Your Name
+* @author  PD Stone
 * @version 1.0
 */
 public class TicTacToeModel {
-    
+
     /**
      * The contents of the Tic-Tac-Toe game board
      */
     private TicTacToeSquare[][] board;
-    
+
     /**
      * xTurn is true if X is the current player, or false if O is the current
      * player
      */
     private boolean xTurn;
-    
+
     /**
      * The dimension (width and height) of the game board
      */
@@ -26,34 +26,34 @@ public class TicTacToeModel {
 
     /**
     * Default Constructor (uses the default dimension)
-    */    
+    */
     public TicTacToeModel() {
-        
+
         this(TicTacToe.DEFAULT_DIMENSION);
-        
+
     }
-    
+
     /**
     * Constructor (uses specified dimension)
-    * 
+    *
     * @param dimension The <em>dimension</em> (width and height) of the new
     * Tic-Tac-Toe board.
     */
     public TicTacToeModel(int dimension) {
-        
+
         /* Initialize dimension; X goes first */
-        
+
         this.dimension = dimension;
         xTurn = true;
-        
+
         /* Create board as a 2D TicTacToeSquare array */
-        
+
         board = new TicTacToeSquare[dimension][dimension];
 
         /* Initialize board (fill with TicTacToeSquare.EMPTY) */
-        
+
         // INSERT YOUR CODE HERE
-        
+
     }
     /**
     * Use isValidSquare(int, int) to check if the specified square is in range,
@@ -70,13 +70,13 @@ public class TicTacToeModel {
     * @see         TicTacToeSquare
     */
     public boolean makeMark(int row, int col) {
-        
+
         // INSERT YOUR CODE HERE
-        
+
         return false; // this is a stub; you may need to remove it later!
-        
+
     }
-    
+
     /**
     * Checks if the specified square is within range (that is, within the bounds
     * of the game board).
@@ -87,13 +87,13 @@ public class TicTacToeModel {
     * if it is not
     */
     private boolean isValidSquare(int row, int col) {
-        
+
         // INSERT YOUR CODE HERE
-        
+
         return false; // this is a stub; you may need to remove it later!
-        
+
     }
-    
+
     /**
     * Checks if the specified square is marked.
     *
@@ -103,13 +103,13 @@ public class TicTacToeModel {
     * if it is not
     */
     private boolean isSquareMarked(int row, int col) {
-                
+
         // INSERT YOUR CODE HERE
-        
+
         return false; // this is a stub; you may need to remove it later!
-            
+
     }
-    
+
     /**
     * Returns a {@link TicTacToeSquare} object representing the content of the
     * specified square of the Tic-Tac-Toe board.
@@ -120,13 +120,13 @@ public class TicTacToeModel {
     * @see         TicTacToeSquare
     */
     public TicTacToeSquare getSquare(int row, int col) {
-        
+
         // INSERT YOUR CODE HERE
-        
+
         return null; // this is a stub; you should remove it later!
-            
+
     }
-    
+
     /**
     * Use isMarkWin() to determine if X or O is the winner, if the game is a
     * tie, or if the game is still in progress. Return the current state of the
@@ -136,13 +136,13 @@ public class TicTacToeModel {
     * @see         TicTacToeState
     */
     public TicTacToeState getState() {
-        
+
         // INSERT YOUR CODE HERE
-        
+
         return null; // this is a stub; you should remove it later!
-        
+
     }
-    
+
     /**
     * Check the squares of the Tic-Tac-Toe board to see if the specified player
     * is the winner.
@@ -152,25 +152,25 @@ public class TicTacToeModel {
     * @see          TicTacToeSquare
     */
     private boolean isMarkWin(TicTacToeSquare mark) {
-        
+
         // INSERT YOUR CODE HERE
-        
+
         return false; // this is a stub; you may need to remove it later!
-        
+
     }
-    
+
     /**
     * Check the squares of the board to see if the Tic-Tac-Toe game is currently
     * in a tie state.
     *
     * @return  true if the game is currently a tie, or false otherwise
-    */	
+    */
     private boolean isTie() {
-        
+
         // INSERT YOUR CODE HERE
-        
+
         return false; // this is a stub; you may need to remove it later!
-        
+
     }
 
     /**
@@ -179,11 +179,11 @@ public class TicTacToeModel {
     * in a tie state.
     *
     * @return  true if the game is currently over, or false otherwise
-    */	
+    */
     public boolean isGameover() {
-        
+
         return TicTacToeState.NONE != getState();
-        
+
     }
 
     /**
@@ -193,11 +193,11 @@ public class TicTacToeModel {
     * player
     */
     public boolean isXTurn() {
-        
+
         return xTurn;
-        
+
     }
-    
+
     /**
     * Getter for dimension.
     *
@@ -205,11 +205,11 @@ public class TicTacToeModel {
     * game board
     */
     public int getDimension() {
-        
+
         return dimension;
-        
+
     }
-    
+
     /**
     * <p>Returns the current content and state of the Tic-Tac-Toe game board as
     * a formatted String.  This method <em>must</em> use a {@link StringBuilder}
@@ -222,13 +222,13 @@ public class TicTacToeModel {
     */
     @Override
     public String toString() {
-        
+
         StringBuilder output = new StringBuilder();
-        
+
         // INSERT YOUR CODE HERE
-        
+
         return output.toString();
-        
+
     }
-    
+
 }

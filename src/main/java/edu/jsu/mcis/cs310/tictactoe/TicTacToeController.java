@@ -3,17 +3,17 @@ package edu.jsu.mcis.cs310.tictactoe;
 /**
 * TicTacToeController implements the Controller for the Tic-Tac-Toe game.
 *
-* @author  Your Name
+* @author  PD Stone
 * @version 1.0
 */
 public class TicTacToeController {
 
     private final TicTacToeModel model;
     private final TicTacToeView view;
-    
+
     /**
     * Constructor.  Uses specified dimension to initialize Model and View
-    * 
+    *
     * @param dimension The <em>dimension</em> (width and height) of the new
     * Tic-Tac-Toe board.
     */
@@ -21,9 +21,9 @@ public class TicTacToeController {
 
         model = new TicTacToeModel(dimension);
         view = new TicTacToeView();
-        
+
     }
-    
+
     /**
     * <p>Implements the main game loop, which repeats until the game is over.
     * This method should use {@link TicTacToeModel#isGameover()} to check if
@@ -42,17 +42,17 @@ public class TicTacToeController {
     */
 
     public void start() {
-    
+
         /* MAIN LOOP (repeats until game is over) */
 
         // INSERT YOUR CODE HERE
-        
+
         /* Display Results and Exit */
 
         view.showBoard(model.toString());
 
         view.showResult(model.getState().toString());
-        
+
     }
 
 }
