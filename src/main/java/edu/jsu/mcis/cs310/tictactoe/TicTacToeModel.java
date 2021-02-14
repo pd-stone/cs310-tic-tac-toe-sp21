@@ -75,9 +75,24 @@ public class TicTacToeModel {
     */
     public boolean makeMark(int row, int col) {
 
-        if()
+        if(isValidSquare(row,col) == false){
+            return false;
+        }
+        else if (isSquareMarked(row,col) == true){
+            return false;
+        }
+        else{
+            if(isXTurn() == true){
+                board[row][col] = TicTacToeSquare.X;
+                xTurn = false;
+            }
+            else if (isXTurn() == false){
+                board[row][col] = TicTacToeSquare.O;
+                xTurn = true;
+            }
+            return true;
+        }
 
-        return false; // this is a stub; you may need to remove it later!
 
     }
 
@@ -92,7 +107,7 @@ public class TicTacToeModel {
     */
     private boolean isValidSquare(int row, int col) {
 
-        if((-1 < row) && (row < width) && (-1 < col) && (col < width)){
+        if((-1 < row) && (row < getDimension()) && (-1 < col) && (col < getDimension())){
           return true;
         }
 
@@ -128,11 +143,8 @@ public class TicTacToeModel {
     * @see         TicTacToeSquare
     */
     public TicTacToeSquare getSquare(int row, int col) {
-
-        // INSERT YOUR CODE HERE
-
-        return null; // this is a stub; you should remove it later!
-
+        
+        return board[row][col];
     }
 
     /**
