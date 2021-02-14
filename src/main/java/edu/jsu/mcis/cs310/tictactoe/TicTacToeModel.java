@@ -52,7 +52,11 @@ public class TicTacToeModel {
 
         /* Initialize board (fill with TicTacToeSquare.EMPTY) */
 
-        // INSERT YOUR CODE HERE
+        for(int i = 0; i < dimension; i++){
+          for (int j = 0; j < dimension; j++){
+            board[i][j]= TicTacToeSquare.EMPTY;
+          }
+        }
 
     }
     /**
@@ -71,7 +75,7 @@ public class TicTacToeModel {
     */
     public boolean makeMark(int row, int col) {
 
-        // INSERT YOUR CODE HERE
+        if()
 
         return false; // this is a stub; you may need to remove it later!
 
@@ -88,9 +92,11 @@ public class TicTacToeModel {
     */
     private boolean isValidSquare(int row, int col) {
 
-        // INSERT YOUR CODE HERE
+        if((-1 < row) && (row < width) && (-1 < col) && (col < width)){
+          return true;
+        }
 
-        return false; // this is a stub; you may need to remove it later!
+        else{return false;}
 
     }
 
@@ -104,9 +110,11 @@ public class TicTacToeModel {
     */
     private boolean isSquareMarked(int row, int col) {
 
-        // INSERT YOUR CODE HERE
+        if(board[row][col] != TicTacToeSquare.EMPTY){
+          return true;
+        }
 
-        return false; // this is a stub; you may need to remove it later!
+        else{return false;}
 
     }
 

@@ -39,9 +39,27 @@ public class TicTacToeView {
     */
     public TicTacToeMove getNextMove(boolean isXTurn) {
 
-        // INSERT YOUR CODE HERE (refer to the example output on Canvas!)
+        if(isXTurn == TRUE{
+            System.out.println("Player 1 (X) Move")
+            System.out.println("Enter the row and column numbers sepeerated by a space: ")
+            String input = keyboard.nextLine();
+            String[] coordinates = input.split(" ");
 
-        return null; // this is a stub; you should remove it later!
+            String row = coordinates[0].trim().substring(1).trim();
+            String column = coordinates[1].trim().substring(0, coordinates[1].trim().length()-1).trim();
+        }
+        elseif(isXTurn == FALSE){
+          System.out.println("Player 2 (O) Move")
+          System.out.println("Enter the row and column numbers sepeerated by a space: ")
+          String input = keyboard.nextLine();
+          String[] coordinates = input.split(" ");
+
+          String row = coordinates[0].trim().substring(1).trim();
+          String column = coordinates[1].trim().substring(0, coordinates[1].trim().length()-1).trim();
+        }
+
+
+        return TicTacToeMove(row, column); // this is a stub; you should remove it later!
 
     }
 
