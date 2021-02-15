@@ -298,10 +298,25 @@ public class TicTacToeModel {
 
         StringBuilder output = new StringBuilder();
 
-        // INSERT YOUR CODE HERE
+        output.append(" ");
+        for (int i = 0; i < dimension; i++){
+            output.append(i);
+        }
+        
+        output.append("\n");
+        for (int i=0; i<dimension; i++){
+            output.append(i);
+            output.append(" ");
+            
+            for(int j = 0; j < dimension; j++){
+                output.append(board[i][j]);
+            }
+            
+            output.append("\n");
+        }
+        output.append("\n");
 
         return output.toString();
-
     }
 
 }
