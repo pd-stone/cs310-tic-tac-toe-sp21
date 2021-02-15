@@ -166,9 +166,19 @@ public class TicTacToeModel {
     */
     public TicTacToeState getState() {
 
-        // INSERT YOUR CODE HERE
+        TicTacToeState gameState = TicTacToeState.NONE;
+        
+        if (isMarkWin(TicTacToeSquare.X) == true){
+            gameState = TicTacToeState.X;
+        }
+        else if (isMarkWin(TicTacToeSquare.O) == true){
+            gameState = TicTacToeState.O;
+        }
+        else if (isTie() == true){
+            gameState = TicTacToeState.TIE;
+        }
 
-        return null; // this is a stub; you should remove it later!
+        return gameState;
 
     }
 
@@ -182,9 +192,37 @@ public class TicTacToeModel {
     */
     private boolean isMarkWin(TicTacToeSquare mark) {
 
-        // INSERT YOUR CODE HERE
+        boolean flag = true;
+        
+        for ( int i=0; i < dimension; i++){
+            if (board[i][i] != mark){
+                flag = false;
+            }
+        }
+       
+        for ( int i=0; i < dimension; i++){
+            if (board[i][dimension-i-1] != mark){
+                flag = false;
+            }
+        }
+        
+        for (int i = 0; i < dimension; i++){
+            for (int j = 0; j <dimension; ++j){
+                if (board[i][j] != mark){
+                    flag = false;
+                }
+            }
+        }
+        
+        for (int i = 0; i < dimension; i++){
+            for (int j = 0; j <dimension; j++){
+                if (board[i][j] != mark){
+                    flag = false;
+                }
+            }
+        }
 
-        return false; // this is a stub; you may need to remove it later!
+        return flag; // this is a stub; you may need to remove it later!
 
     }
 
@@ -196,9 +234,15 @@ public class TicTacToeModel {
     */
     private boolean isTie() {
 
-        // INSERT YOUR CODE HERE
+        for (int i=0; i < dimension; i++){
+            for (int j=0; j < dimension; j++){
+                if (board[i][j] == TicTacToeSquare.EMPTY){
+                    return false;
+                }
+            }
+        }
 
-        return false; // this is a stub; you may need to remove it later!
+        return true; // this is a stub; you may need to remove it later!
 
     }
 
