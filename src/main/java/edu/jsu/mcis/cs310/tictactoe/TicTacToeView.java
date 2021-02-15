@@ -38,30 +38,25 @@ public class TicTacToeView {
     * @see             TicTacToeMove
     */
     public TicTacToeMove getNextMove(boolean isXTurn) {
-
-        TicTacToeMove gameMove = null;
-        Scanner input = new Scanner(System.in);
         
-        if(isXTurn == true){
-            System.out.println("Player 1 (X) Move");
-            System.out.println("Enter the row and column numbers separated by a space: ");
-            String playerInput = input.nextLine();
-            String[] coordinates = playerInput.split(" ");
-
-            gameMove = new TicTacToeMove(Integer.parseInt(coordinates[0]), 
-                    Integer.parseInt(coordinates[1]));
-        }
-       else{
-          System.out.println("Player 2 (O) Move");
-          System.out.println("Enter the row and column numbers separated by a space: ");
-          String playerInput = input.nextLine();
-          String[] coordinates = playerInput.split(" ");
-
-          gameMove = new TicTacToeMove(Integer.parseInt(coordinates[0]), 
-                  Integer.parseInt(coordinates[1]));
+        if(isXTurn) {
+            System.out.println("Player 1 (X) move:");
         }
         
+        else{
+            System.out.println("Player 2 (O) move:");
+        }
+        
+        
+        System.out.print("Enter the row and column numbers, separated by a space: ");
+
+        int row = keyboard.nextInt();
+        int col = keyboard.nextInt();
+
+        TicTacToeMove gameMove = new TicTacToeMove(row, col);
+		
         return gameMove;
+
     }
 
     /**
