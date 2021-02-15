@@ -125,11 +125,11 @@ public class TicTacToeModel {
     */
     private boolean isSquareMarked(int row, int col) {
 
-        if(board[row][col] != TicTacToeSquare.EMPTY){
-          return true;
+        if(getSquare(row,col) == TicTacToeSquare.EMPTY){
+          return false;
         }
 
-        else{return false;}
+        else{return true;}
 
     }
 
@@ -144,7 +144,16 @@ public class TicTacToeModel {
     */
     public TicTacToeSquare getSquare(int row, int col) {
         
-        return board[row][col];
+        TicTacToeSquare newSquare = TicTacToeSquare.EMPTY;
+        
+        if (board[row][col] == TicTacToeSquare.X){
+            newSquare = TicTacToeSquare.X;
+        }
+        if (board[row][col] == TicTacToeSquare.O){
+            newSquare = TicTacToeSquare.O;
+        }
+        
+        return newSquare;
     }
 
     /**
