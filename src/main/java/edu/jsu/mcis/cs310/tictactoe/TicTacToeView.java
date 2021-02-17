@@ -106,7 +106,6 @@ public class TicTacToeView extends JPanel {
                 board[row][col].setText(controller.getSquareAsString(row,col));
             }
         }
-
     }
     
     /**
@@ -117,9 +116,14 @@ public class TicTacToeView extends JPanel {
     * preventing any further clicks to be registered on the button.
     */
     public void disableSquares() {
-    
-        // INSERT YOUR CODE HERE
-            
+
+        for (int row = 0; row < board.length; row++){
+            for (int col = 0; col < board.length; col++){
+
+                board[row][col].setEnabled(false);
+            }
+        }
+
     }
         
     /**
