@@ -40,11 +40,11 @@ public class TicTacToeView {
     public TicTacToeMove getNextMove(boolean isXTurn) {
         
         if(isXTurn) {
-            System.out.println("Player 1 (X) move:");
+            System.out.println("Player 1 (X) move: ");
         }
         
         else{
-            System.out.println("Player 2 (O) move:");
+            System.out.println("Player 2 (O) move: ");
         }
         
         
@@ -56,7 +56,7 @@ public class TicTacToeView {
         TicTacToeMove gameMove = new TicTacToeMove(row, col);
 		
         return gameMove;
-
+        
     }
 
     /**

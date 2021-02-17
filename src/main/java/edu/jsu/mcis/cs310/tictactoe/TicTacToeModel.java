@@ -143,16 +143,16 @@ public class TicTacToeModel {
     * @see         TicTacToeSquare
     */
     public TicTacToeSquare getSquare(int row, int col) {
-        
+
         TicTacToeSquare newSquare = TicTacToeSquare.EMPTY;
-        
+
         if (board[row][col] == TicTacToeSquare.X){
             newSquare = TicTacToeSquare.X;
         }
         if (board[row][col] == TicTacToeSquare.O){
             newSquare = TicTacToeSquare.O;
         }
-        
+
         return newSquare;
     }
 
@@ -167,7 +167,7 @@ public class TicTacToeModel {
     public TicTacToeState getState() {
 
         TicTacToeState gameState = TicTacToeState.NONE;
-        
+
         if (isMarkWin(TicTacToeSquare.X) == true){
             gameState = TicTacToeState.X;
         }
@@ -192,37 +192,61 @@ public class TicTacToeModel {
     */
     private boolean isMarkWin(TicTacToeSquare mark) {
 
-        boolean flag = true;
-        
+        int row = 0;
+        int col = 0 ;
+        int diag1 = 0;
+        int diag2 = 0;
+
         for ( int i=0; i < dimension; i++){
-            if (board[i][i] != mark){
-                flag = false;
+            if (board[i][i] == mark){
+                diag1++;
             }
         }
-       
+
         for ( int i=0; i < dimension; i++){
-            if (board[i][dimension-i-1] != mark){
-                flag = false;
+            if (board[i][dimension-i-1] == mark){
+                diag2++;
             }
         }
-        
+
         for (int i = 0; i < dimension; i++){
-            for (int j = 0; j <dimension; ++j){
-                if (board[i][j] != mark){
-                    flag = false;
+            if (col != dimension){
+                col = 0;
+                for (int j = 0; j <dimension; j++){
+                    if (board[j][i] == mark){
+                        col++;
+                    }
                 }
             }
+
         }
-        
+
         for (int i = 0; i < dimension; i++){
-            for (int j = 0; j <dimension; j++){
-                if (board[i][j] != mark){
-                    flag = false;
+            if (row != dimension){
+                row = 0;
+                for (int j = 0; j <dimension; j++){
+                    if (board[i][j] == mark){
+                        row++;
+                    }
                 }
             }
         }
 
-        return flag; // this is a stub; you may need to remove it later!
+        if (row == dimension){
+            return true;
+        }
+        else if (col == dimension){
+            return true;
+        }
+        else if (diag1 == dimension){
+            return true;
+        }
+        else if (diag2 == dimension){
+            return true;
+        }
+        else{
+            return false;
+        }
 
     }
 
@@ -302,16 +326,16 @@ public class TicTacToeModel {
         for (int i = 0; i < dimension; i++){
             output.append(i);
         }
-        
+
         output.append("\n");
         for (int i=0; i<dimension; i++){
             output.append(i);
             output.append(" ");
-            
+
             for(int j = 0; j < dimension; j++){
                 output.append(board[i][j]);
             }
-            
+
             output.append("\n");
         }
         output.append("\n");
